@@ -1,0 +1,26 @@
+<!--<li  (click)="setActive('home')" class="{{getActive('home')}}"> <a [routerLink]="['/FullScreen']"></a></li>-->
+<app-banner></app-banner>
+<div class="container">
+  <h1 class="my-4">Welcome to Modern Business</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group" style="width:25%">
+        <input type="text" [(ngModel)]="count" class="form-control" id="exampleInputAmount" placeholder="How many card and portfolio do you want">
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <!--*ngFor="let num of count | demoNumber"-->
+   <app-card></app-card>
+  </div>
+  <div class="row">        
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let num of count | demoNumber">
+      <app-portfolio></app-portfolio>
+    </div>
+  </div>
+  <hr>
+  <app-features></app-features>
+  <hr>
+  <app-callus></app-callus>
+</div>

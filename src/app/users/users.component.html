@@ -1,0 +1,30 @@
+
+<div class="container">  
+  <ol class="breadcrumb">
+    <li>
+      <a href="home">Home</a>
+    </li>
+    <li class="active">Users</li>
+  </ol>
+  
+  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" *ngFor="let user of users">  
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{user.id}}) {{user.name}}</h3>
+        </div>
+        <div class="panel-body" align="center">
+          <p>Username: {{user.username}}<br>
+            <a href="mailto:{{user.email}}" target="_blank">Email:- {{user.email}}</a><br>
+            Phone:- {{user.phone}}<br>
+            <a href="{{user.website}}" target="_blank">Website:- {{user.website}}</a><br>
+            Company:- {{user.company.name}},<br/>{{user.company.catchPhrase}},<br/>bs:- {{user.company.bs}}
+          </p>
+        </div>
+        <div class="panel-footer" align="center">
+          Address:<br/> Street: {{user.address.street}}<br/>Suite: {{user.address.suite}}<br/>
+          City: {{user.address.city}}<br/>Zipcode: {{user.address.zipcode}}<br/>Geo: {{user.address.geo.lat}}, {{user.address.geo.lon}}
+        </div>
+    </div>
+  </div>
+  
+</div>

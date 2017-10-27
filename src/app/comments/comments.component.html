@@ -1,0 +1,24 @@
+
+<div class="container">
+  <ol class="breadcrumb">
+    <li>
+      <a href="home">Home</a>
+    </li>
+    <li class="active">Comments</li>
+  </ol>  
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let comment of comments">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title" style="font-size:20px">
+          {{comment.id}}) {{comment.name}}
+        </h3>
+      </div>
+      <div class="panel-body">
+        <a href="#">Comment:</a> {{comment.body}}
+      </div>
+      <div class="panel-footer">          
+        <a href="#">Email id:-</a> {{comment.email}}
+      </div>  
+    </div>
+  </div>  
+</div>

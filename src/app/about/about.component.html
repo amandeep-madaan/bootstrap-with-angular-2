@@ -1,0 +1,51 @@
+<div class="container">
+  <ol class="breadcrumb">
+    <li>
+      <a href="home">Home</a>
+    </li>
+    <li class="active">About</li>
+  </ol>
+  <div class="row">  
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img class="img-fluid rounded mb-4" src="http://placehold.it/560x360" alt="placeholder">
+    </div>  
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <h2>About Modern Business</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+    </div>  
+  </div>
+  <h2>Our Team</h2>  
+  <div class="row">
+    <div class="col-md-12">
+      <div class="input-group" style="width:25%">
+        <input type="text" [(ngModel)]="count" class="form-control" id="exampleInputAmount" placeholder="How many team members do you want">
+      </div>
+    </div>
+  </div>
+  <div class="row">    
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" *ngFor="let num of count | demoNumber">
+      <app-team></app-team>
+    </div>   
+  </div>
+  <h2>Our Customers</h2>    
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <app-customer></app-customer>
+    </div>    
+  </div>  
+</div>
